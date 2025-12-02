@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource name="jdbc/FootballDB" 
+              auth="Container"
+              type="javax.sql.DataSource"
+              
+              driverClassName="org.hsqldb.jdbcDriver"
+              url="jdbc:hsqldb:file:./HAGL_DB_DATA/hagl_db;shutdown=true"
+              
+              username="SA"
+              password=""
+              
+              maxTotal="20" 
+              maxIdle="10" 
+              maxWaitMillis="10000" />
+</Context>

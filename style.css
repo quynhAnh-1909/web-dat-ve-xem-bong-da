@@ -1,0 +1,187 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #006400; /* màu xanh lá HAGL */
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+  background: url("https://haglfc.com.vn/wp-content/uploads/2024/02/banner-hagl.jpg") center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Match list */
+.matches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.match-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+}
+
+.match-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.match-card .info {
+  padding: 15px;
+}
+
+.match-card .info h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #006400;
+}
+
+.match-card .info p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.match-card button {
+  background: #006400;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.match-card button:hover {
+  background: #228B22;
+}
+
+/* Seat selection modal */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 600px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+  margin: 20px 0;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  background: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.seat.selected {
+  background: #006400;
+}
+
+.seat.reserved {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.modal button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #006400;
+  color: #fff;
+}
+
+.modal button:hover {
+  background: #228B22;
+}
+
+/* Footer */
+footer {
+  background: #006400;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  margin-top: 40px;
+}
